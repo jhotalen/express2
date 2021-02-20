@@ -23,6 +23,7 @@ campsiteRouter
     authenticate.verifyUser,
     authenticate.verifyAdmin,
     (req, res, next) => {
+      console.log(req.body);
       Campsite.create(req.body)
         .then((campsite) => {
           console.log("Campsite Created ", campsite);
